@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.form{
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 70% !important;
+}
+.form-container{
+  display:flex;
+  flex-direction: column;
+  width:32rem;
+  padding:2rem;
+  border: .1rem #fff solid;
+  list-style: none;
+  background-color: white;
+
+}
+.storedPasswords{
+  display:flex;
+  list-style: none;
+  color:black;
+  width:100%;
+  flex-wrap: wrap;
+}
+.storedPasswords li{
+
+  background-color: white;
+  color:black;
+  width:25em;
+  padding:1em;
+  margin:1.5em;
+  transition:0.7s
+}
+.storedPasswords li:hover{
+  background-color: #fcb800;
   color: white;
 }
+.form-container li{
+  display:flex;
+  flex-direction: column;
+  margin-bottom:1rem ;
+  background-color: white;
+  list-style: none;
 
-.App-link {
-  color: #61dafb;
+}
+label{
+  display: flex;
+}
+.formheader{
+  text-align: center;
+}
+.nomargin{
+  margin:0 !important
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signInButton{
+  padding:1rem;
+  border-radius:1rem;
+  border:0;
+  background-color: #fcb800;
+  color: white;
+}
+.signInButton:hover{
+  border:5px solid rgb(255,255,255,0.6);
+}
+
+.formsubmitbutton{
+  width:70%;
+  margin: 0 auto
+}
+.passwordbutton{
+  margin:0.2em;
+  border:0;
+  background-color: white;
+  color:black;
+  cursor: pointer;
+}
+.fullwidth{
+  width:100%;
+  display: flex;
+}
+.pagecontent{
+  text-align: center;
+  align-items: center;
+}
+body {
+  transform: scale(1,0.8);
+  transform-origin: 0 0;
+}
+
+.homepagenav{
+  text-align: center;
+  align-items: center;
+}
+
+.authBar{
+  display: flex;
+}
+.formDiv{
+  height:50%;
+  background-color:white
+}
+.authBar{
+  height: 22.75em !important;
+  background-color: white;
+  margin-right: 2em;
+}
+.authNavItem{
+  padding:3em;
+  background-color:white;
+  height: 23.6%;
+}
+.authNavItem:hover{
+  background-color: #fcb800;
+}
+.active{
+  background-color: #fcb800;
+}
+.myLinks{
+  text-decoration: none;
+  color:black;
+}
+body{
+  background-image: linear-gradient(to bottom right, white, blue);;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.authNavImage{
+  width:10rem;
+  background-image: url("https://images.unsplash.com/photo-1556155092-8707de31f9c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+.authNavImage img{
+  width:150%
+}
+input{
+  border:0;
+  background-color: #f1f1f1;
+  height:2.75rem;
+  display: flex;
+  float: right;
+  width: 100%;
+
+}
+input:focus{
+  background-color: transparent;
+  outline: none;
+}
+input:active{
+  background-color: transparent;
+  outline: none;
+}
+.input{
+  background-color: #f1f1f1;
+  display: flex;
+}
+span{
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75em;
+  margin-right: 1rem;
+  margin-left:1rem
+}
+
+text{
+  color: white;
+}
+.password{
+
+}
+.passwordInteractions{
+  visibility: hidden;
+  opacity: 0;
+  height:0;
+  transition: visibility 0s, opacity 1s linear,height 0.25s;
+}
+.password:hover .passwordInteractions{
+  visibility: visible;
+  opacity: 1;
+  height:3rem ;
+  font-size: 2rem;
+}
+
+.hidden{
+  display: none;
+}
+.bar{
+  width:30%;
+  align-items: center;;
+  margin: 0 auto;
+}
+.dontSee{
+  opacity:0
+}
+.tooltip {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: relative;
+  z-index: 1;
+  left: 70px;
+  top:-30px;
+  margin-left:-130px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  max-width:0;
+}
+
+.copyToClip:hover .tooltip{
+  visibility: visible;
+  opacity: 1;
 }
